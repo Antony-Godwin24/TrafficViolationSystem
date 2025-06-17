@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('about') }}">About Us</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>Prediction Result</h1>
+    <img src="{{ url_for('static', filename='uploads/' + filename) }}" width="400" />
+    <h2>Violation Detected: {{ prediction }}</h2>
+    <a class="btn" href="{{ url_for('home') }}">Try another</a>
+  </div>
+</body>
+</html>

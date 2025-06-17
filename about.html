@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('about') }}">About Us</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>About Our Project</h1>
+    <p>This project is an AI-based system developed to detect common traffic violations such as riding without a helmet and carrying more than two people (overloading) on two-wheelers. Using a deep learning classification model trained with real traffic images, the system can analyze uploaded images or videos and instantly identify whether a violation has occurred. It leverages YOLOv8 for high-speed and accurate predictions, all integrated into a user-friendly web interface built with Flask. The main goal of this project is to promote road safety by automating the detection process, which can assist in real-time monitoring, law enforcement, or awareness campaigns. This solution is lightweight, efficient, and ideal for smart city applications, research purposes, or educational demonstrations.</p>
+  </div>
+  <footer>
+    <p>&copy; 2025 Traffic Violation Detection System</p>
+    </footer>
+</body>
+</html>

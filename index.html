@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Traffic Violation Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <nav>
+    
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('about') }}">About Us</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>Upload Image or Video</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+      <div class="upload-box">
+        <label for="file-upload" class="custom-file-upload">Choose File</label>
+        <input id="file-upload" type="file" name="file" onchange="updateFileName()" required />
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 Traffic Violation Detection System</p>
+    </footer>
+</body>
+</html>
